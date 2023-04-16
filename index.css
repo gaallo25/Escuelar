@@ -78,6 +78,63 @@
 .container-tajeta {
   position: relative;
 }
+.container-tajeta p {
+  color: white;
+  text-align: center;
+  font-family: roboto;
+  padding-top: 20px;
+  font-size: 1.2rem;
+}
+.container-cards-aprendemos {
+  margin: 0px auto;
+  margin-top: 5rem;
+  gap: 15px;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+}
+.container-cards-aprendemos .title {
+  font-family: RobotoBlack;
+  color: #082f24;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.container-cards-aprendemos .descripcion {
+  text-align: center;
+  font-family: roboto;
+  height: 40%;
+  max-width: 90%;
+  margin: 2rem auto;
+  color: #082f23;
+}
+.card-aprendemos {
+  border-radius: 1rem;
+  position: relative;
+  padding: 2rem 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+  background: white;
+}
+.card-aprendemos img {
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -31%;
+  margin-bottom: 10%;
+}
+.container-como-aprendemos {
+}
+.svg1 {
+  margin-top: -15%;
+  fill: #082f24;
+  max-width: 100%;
+}
+.svg2 {
+  fill: #082f24;
+  max-width: 100%;
+}
 .container-objetivos {
   display: flex;
   justify-content: center;
