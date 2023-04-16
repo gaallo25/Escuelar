@@ -10,9 +10,6 @@
   font-family: RobotoMedium;
   src: url(Roboto-Medium.ttf);
 }
-body {
-  margin-bottom: 500px;
-}
 * {
   padding: 0;
   margin: 0;
@@ -27,10 +24,10 @@ body {
   height: auto;
 }
 .button-crecimiento-personal {
-  width: 200px;
-  height: 40px;
+  width: 300px;
+  padding: 1rem 0px;
   border-radius: 30px;
-  border: 2px solid #85c14c;
+  border: 3px solid #85c14c;
   color: #85c14c;
   display: flex;
   justify-content: center;
@@ -53,10 +50,13 @@ body {
   font-size: 1.5rem;
 }
 .container-cards-crecimiento {
+  margin-left: auto;
+  max-width: 1200px;
   display: flex;
   gap: 30px;
   justify-content: center;
-  margin-top: 8rem;
+  margin-top: 12rem;
+  margin-right: auto;
 }
 .container-banner-principal {
   background-color: #082f23;
@@ -82,16 +82,17 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 5rem;
+  margin-bottom: 5rem;
 }
 .container-objetivos p {
   color: #50b37e;
   font-family: RobotoMedium;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .card-crecimiento {
-  width: 19%;
+  width: 371px;
   background-color: white;
-  height: 350px;
+  height: 400px;
   border-radius: 120px 40px 40px 40px;
   position: relative;
   box-shadow: 0px 3px 0px 1px #ccc;
@@ -109,8 +110,9 @@ body {
 .info-crecimiento {
   position: absolute;
   bottom: 0;
-  height: 50%;
-  padding-top: 10px;
+  width: 100%;
+  height: 100%;
+  padding-top: 200px;
 }
 .items-objetivos {
   display: flex;
@@ -129,9 +131,18 @@ body {
   top: -15px;
   left: -5px;
 }
+.leaf-crecimiento {
+  width: 100%;
+  height: 370px;
+
+  background-size: 240%;
+  background-position: 55% 80%;
+  border-radius: 200px 0 200px 0;
+  position: absolute;
+  top: -195px;
+}
 .modelo-formativo {
   background-color: #f2f2f2;
-  height: 8241px;
   padding-top: 3rem;
 }
 .numero-objetivo {
@@ -144,17 +155,18 @@ body {
 }
 .texto-crecimiento {
   text-align: center;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  width: 87%;
-  margin-left: auto;
-  margin-right: auto;
+  font-family: Roboto;
+  color: #706f6f;
+  line-height: 1.8rem;
+  font-size: 1.3rem;
 }
 .titulo-crecimiento {
   text-align: center;
   margin-bottom: 1.2rem;
+  font-family: RobotoMedium;
   font-weight: 900;
   font-size: 25px;
+  color: #082f24;
 }
 .title-1 {
   font-family: RobotoBlack;
