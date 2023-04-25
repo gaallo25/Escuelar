@@ -62,6 +62,10 @@
   background-color: #082f23;
   padding-bottom: 3rem;
 }
+.container-components {
+  max-width: 1200px;
+  margin-right: 0;
+}
 .container-logo {
   height: 100%;
   position: absolute;
@@ -202,6 +206,26 @@
   background-color: #f2f2f2;
   padding-top: 3rem;
 }
+.mt-y-2 {
+  margin: 2rem 0;
+}
+.pt4 {
+  padding-top: 4rem;
+  display: block;
+}
+.p14 {
+  text-align: center;
+  color: black;
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  font-family: Roboto;
+}
+.pad50 {
+  padding: 50px 0px;
+}
+.white {
+  color: white;
+}
 .numero-objetivo {
   font-size: 5rem !important;
 }
@@ -225,6 +249,12 @@
   font-size: 25px;
   color: #082f24;
 }
+.parrafoBanner {
+  text-align: center;
+  font-family: roboto;
+  color: white;
+  padding-top: 100px;
+}
 .title-1 {
   font-family: RobotoBlack;
   color: white;
@@ -241,4 +271,123 @@
   font-family: roboto;
   color: white;
   padding-top: 2rem;
+}
+.title-como-aprendemos {
+  font-family: RobotoMedium;
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 3rem;
+  color: white;
+}
+@media (max-width: 900px) {
+  .container-banner-principal {
+    background-color: #082f23;
+    padding-bottom: 3rem;
+    overflow: hidden;
+    width: 100%;
+  }
+  .bannerPrincipal .banner {
+    /* max-width: 100%; */
+    width: 100%;
+    height: 278px;
+    object-fit: cover;
+  }
+  .container-logo {
+    padding-top: 23px;
+  }
+  .container-logo .logo {
+    max-width: 40%;
+  }
+  .container-tajeta {
+    margin: 20px;
+    width: 100%;
+  }
+  .container-objetivos p {
+    font-size: 2rem;
+  }
+  .items-objetivos {
+    flex-wrap: wrap;
+  }
+  .items-objetivos div {
+    width: 50%;
+  }
+  .container-cards-aprendemos {
+    margin-top: 5rem;
+
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    width: 500%;
+  }
+  .texto-crecimiento {
+    font-size: 1.1rem;
+  }
+  .parrafoBanner {
+    text-align: center;
+    font-family: roboto;
+    color: white;
+    padding-top: 20px;
+  }
+  .card-aprendemos {
+    border-radius: 1rem;
+    position: relative;
+    padding: 2rem 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 20px;
+    background: white;
+  }
+  .modelo-formativo {
+    overflow: hidden;
+  }
+  .container-cards-crecimiento {
+    max-width: none;
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+    margin-top: 12rem;
+
+    width: 300%;
+  }
+  .card-crecimiento {
+    width: 100%;
+    margin: 20px;
+  }
+  .title-1 {
+    font-family: RobotoBlack;
+    color: white;
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+  .title-2 {
+    font-family: roboto;
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 0.1rem;
+  }
+  .title-3 {
+    font-family: roboto;
+    color: white;
+    padding-top: 1rem;
+    font-size: 0.7rem;
+  }
+  element.style {
+    grid-template-columns: repeat(1, 80%);
+  }
+  .container-como-aprendemos {
+    overflow: hidden;
+  }
+  .grid-tarjetas {
+    display: flex;
+    max-width: 600%;
+    grid-template-columns: repeat(3, 1fr);
+    /* row-gap: 58px; */
+    /* column-gap: 10px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin-top: 20px;
+    width: 600%;
+  }
 }
