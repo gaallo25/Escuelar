@@ -1,0 +1,73 @@
+<div id="Modal">
+  <span id="closeModal">X</span>
+  <video controls class="Modal" id="videoModal">
+    <source
+      src="https://cdn.shopify.com/videos/c/o/v/5dcb438996d2449bbf6ee1aa552f93ec.mp4"
+      type="video/mp4"
+    />
+  </video>
+</div>
+<div class="slider">
+  <button aria-label="Anterior" class="prev" id="flecha">
+    <i class="fa-solid fa-caret-left" style="font-size: 60px"></i>
+  </button>
+  <div class="containerCarousel">
+    <div class="relative">
+      <button class="bg-[#ca2e2d] absolute buttonCarusel1">
+        <a
+          class="font-[Poleno] px-4 text-white"
+          target="_blank"
+          style="color: #e1d5bc"
+          href="https://panaca.co/pages/horarios#contenedorTarjetaHorariosAulas"
+          >Conoce las aulas vivas</a
+        >
+      </button>
+      <img
+        class="imagePc"
+        src="{{ section.settings.imageCarouselBanner1 | img_url: '1800x' }}"
+        alt=""
+      />
+      <img
+        class="imageMovil"
+        src="{{section.settings.imageMovil1 | img_url: '1800x'}}"
+        alt=""
+      />
+    </div>
+
+    <button aria-label="Siguiente" class="next" id="flecha">
+      <i class="fa-solid fa-caret-right" style="font-size: 60px"></i>
+    </button>
+  </div>
+
+  <script>
+    let prev = document.querySelector(".fa-caret-left");
+    let next = document.querySelector(".fa-caret-right");
+    let image = document.querySelector(".slider div");
+    console.log(image);
+    let imageContent = document.querySelectorAll(".containerCarousel div");
+    let imageContentMath = imageContent.length * 100;
+    let widthContainer = document.querySelector(".containerCarousel");
+    let counter = 0;
+
+    widthContainer.style.width = imageContentMath + "%";
+    prev.addEventListener("click", (e) => {
+      if (counter == 0) {
+        counter = imageContentMath - 100;
+        image.style.marginLeft = "-" + counter + "%";
+      } else {
+        counter = counter -= 100;
+        image.style.marginLeft = "-" + counter + "%";
+      }
+    });
+
+    next.addEventListener("click", (e) => {
+      if (counter == imageContentMath - 100) {
+        counter = 0;
+        image.style.marginLeft = "-" + counter + "%";
+      } else {
+        counter = counter += 100;
+        image.style.marginLeft = "-" + counter + "%";
+      }
+    });
+  </script>
+</div>
