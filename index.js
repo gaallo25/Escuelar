@@ -1,5 +1,7 @@
 if (screen.width < 900) {
   let tarjetas = document.getElementById("grid-tarjetas");
+  let derecha = document.getElementById("flecha-derecha");
+
   let containercardsaprendemos = document.getElementById(
     "container-cards-aprendemos"
   );
@@ -12,13 +14,15 @@ if (screen.width < 900) {
   let contadorcrecimiento = 1;
   let contadortarjetas = 1;
   let contadorAprendemos = 1;
-  setInterval(() => {
-    if (contadortarjetas == 6) {
+  /*  setInterval(() => {
+    if (contadortarjetas == 7) {
       contadortarjetas = 1;
     }
     tarjetas.style.marginLeft = "-" + contadortarjetas + "00%";
     contadortarjetas++;
-  }, 8000);
+    console.log("hola");
+  }, 3000); */
+  /* 
   setInterval(() => {
     if (contadorAprendemos == 5) {
       contadorAprendemos = 1;
@@ -36,5 +40,5 @@ if (screen.width < 900) {
     containercardscrecimiento2.style.marginLeft =
       "-" + contadorcrecimiento + "00%";
     contadorcrecimiento++;
-  }, 2000);
+  }, 2000); */
 }
