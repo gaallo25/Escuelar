@@ -58,6 +58,7 @@ if (screen.width < 900) {
   }
 
   function handleTouchMove(event) {
+    event.preventDefault(); 
     alert("movimiento ios");
   }
 
