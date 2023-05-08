@@ -57,18 +57,19 @@ if (screen.width < 900) {
     startX = event.touches[0].clientX; // Guardar la posición inicial en X
     endX = null; 
   }
-
+var deltaX;
+  var deltaY;
   function handleTouchMove(event) {
    var touch = event.touches[0];
-  var deltaX = touch.clientX - startX; // Distancia horizontal recorrida
-  var deltaY = touch.clientY - startY;
+   deltaX = touch.clientX - startX; // Distancia horizontal recorrida
+   deltaY = touch.clientY - startY;
    
   }
 
   // Función de controlador de evento para el final del deslizamiento
     function handleTouchEnd(event) {
    if (endX !== null) {
-     
+     if (Math.abs(deltaX) > Math.abs(deltaY)) {
     var deltaX = endX - startX; // Calcular la distancia deslizada
     
     // Verificar si la distancia deslizada es pequeña (simulando un clic)
@@ -103,6 +104,7 @@ if (screen.width < 900) {
         }
       }
     }
+     }
    }
   } 
 
