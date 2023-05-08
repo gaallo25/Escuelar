@@ -57,9 +57,6 @@ if (screen.width < 900) {
     startX = event.touches[0].clientX; // Guardar la posición inicial en X
   }
 
-  function handleTouchMove(event) {
-    
-  }
 
   // Función de controlador de evento para el final del deslizamiento
   function handleTouchEnd(event) {
