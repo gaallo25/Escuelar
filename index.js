@@ -40,6 +40,7 @@ if (screen.width < 900) {
 
       // Aquí puedes agregar la lógica para realizar la acción deseada
       if (deltaX > 0) {
+        alert("deberia mover");
         if (counter == 0) {
           counter = imageContentMath - 100;
           circulos[counter / 100].style.border = "2px solid red";
@@ -73,7 +74,7 @@ if (screen.width < 900) {
   myElement.addEventListener("touchstart", handleTouchStart, false);
   myElement.addEventListener("touchend", handleTouchEnd, false);
 
-  let widthContainer2 = document.getElementById("container-cards-crecimiento");
+  /* let widthContainer2 = document.getElementById("container-cards-crecimiento");
   let circulos2 = document.querySelectorAll(".modelo-formativo .circulos");
   console.log(circulos2);
   let image2 = widthContainer2;
@@ -134,5 +135,5 @@ if (screen.width < 900) {
 
   // Agregar controladores de eventos táctiles al elemento
   myElement2.addEventListener("touchstart", handleTouchStart2, false);
-  myElement2.addEventListener("touchend", handleTouchEnd2, false);
+  myElement2.addEventListener("touchend", handleTouchEnd2, false); */
 }
