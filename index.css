@@ -151,13 +151,17 @@
 }
 .container-tajeta {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .container-tajeta p {
   color: white;
+  max-width: 80%;
   text-align: center;
   font-family: RobotoRegular;
   padding-top: 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .container-cards-equipo {
   max-width: 90%;
