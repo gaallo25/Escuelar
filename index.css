@@ -161,7 +161,7 @@
   text-align: center;
   font-family: RobotoRegular;
   padding-top: 20px;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 .container-cards-equipo {
   max-width: 90%;
@@ -483,7 +483,7 @@ form {
 .titulo-crecimiento {
   text-align: center;
   margin-bottom: 1.2rem;
-  font-family: RobotoMedium;
+  font-family: BasisBlack;
   font-weight: 900;
   font-size: 25px;
   color: #082f24;
