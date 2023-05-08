@@ -101,7 +101,7 @@
 .container-components {
   margin-left: 15%;
   display: flex;
-  margin-bottom: 140px;
+  margin-bottom: 12%;
   justify-content: space-between;
   position: relative;
 }
@@ -609,7 +609,7 @@ form {
     margin-left: 0;
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
+    margin-bottom: 15%;
     justify-content: space-between;
     position: initial;
   }
