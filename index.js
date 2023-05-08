@@ -59,7 +59,7 @@ if (screen.width < 900) {
   }
 
   function handleTouchMove(event) {
-    event.preventDefault();
+   
     endX = event.touches[0].clientX;
 
    
