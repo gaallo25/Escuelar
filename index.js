@@ -40,8 +40,8 @@ if (screen.width < 900) {
 
       // Aquí puedes agregar la lógica para realizar la acción deseada
       if (deltaX > 0) {
-        alert("deberia mover");
         if (counter == 0) {
+          alert("deberia mover" + counter);
           counter = imageContentMath - 100;
           circulos[counter / 100].style.border = "2px solid red";
           circulos[0].style.border = "none";
