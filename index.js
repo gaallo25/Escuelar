@@ -11,8 +11,10 @@ if (screen.width < 900) {
   let containercardscrecimiento2 = document.getElementById(
     "container-cards-crecimiento2"
   );
- 
-  let circulos = document.querySelectorAll(".container-banner-principal .circulos");
+
+  let circulos = document.querySelectorAll(
+    ".container-banner-principal .circulos"
+  );
 
   let image = widthContainer;
   let imageContent = document.querySelectorAll(".container-tajeta");
@@ -47,14 +49,16 @@ if (screen.width < 900) {
       circulos[counter / 100].style.border = "2px solid red";
     }
   }); */
-  
 
- 
   var startX; // Posición inicial en X al inicio del deslizamiento
-  console.log("hola")
+  console.log("hola");
   // Función de controlador de evento para el inicio del deslizamiento
   function handleTouchStart(event) {
     startX = event.touches[0].clientX; // Guardar la posición inicial en X
+  }
+
+  function handleTouchMove(event) {
+    event.preventDefault(); // Evitar el desplazamiento de la página en iOS
   }
 
   // Función de controlador de evento para el final del deslizamiento
@@ -99,20 +103,22 @@ if (screen.width < 900) {
 
   // Agregar controladores de eventos táctiles al elemento
   myElement.addEventListener("touchstart", handleTouchStart, false);
+  myElement.addEventListener("touchmove", handleTouchMove, false);
   myElement.addEventListener("touchend", handleTouchEnd, false);
-  
 
   let widthContainer2 = document.getElementById("container-cards-crecimiento");
   let circulos2 = document.querySelectorAll(".modelo-formativo .circulos");
-  console.log(circulos2)
+  console.log(circulos2);
   let image2 = widthContainer2;
-  let imageContent2 = document.querySelectorAll("#container-cards-crecimiento .card-crecimiento");
+  let imageContent2 = document.querySelectorAll(
+    "#container-cards-crecimiento .card-crecimiento"
+  );
   let imageContentMath2 = imageContent2.length * 100;
   let counter2 = 0;
   circulos2[0].style.border = "2px solid red";
   widthContainer2.style.width = imageContentMath2 + "%";
   var startX2; // Posición inicial en X al inicio del deslizamiento
-  console.log("hola")
+  console.log("hola");
   // Función de controlador de evento para el inicio del deslizamiento
   function handleTouchStart2(event) {
     startX2 = event.touches[0].clientX; // Guardar la posición inicial en X
@@ -126,7 +132,7 @@ if (screen.width < 900) {
     // Verificar si la distancia deslizada es pequeña (simulando un clic)
     if (Math.abs(deltaX) > 10) {
       // Acción a realizar en el evento de deslizamiento similar a un clic
-      
+
       // Aquí puedes agregar la lógica para realizar la acción deseada
       if (deltaX > 0) {
         if (counter2 == 0) {
@@ -163,4 +169,3 @@ if (screen.width < 900) {
   myElement2.addEventListener("touchstart", handleTouchStart2, false);
   myElement2.addEventListener("touchend", handleTouchEnd2, false);
 }
-
