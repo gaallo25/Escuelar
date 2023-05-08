@@ -109,7 +109,7 @@ if (screen.width < 900) {
   // Agregar controladores de eventos táctiles al elemento
   myElement.addEventListener("touchstart", handleTouchStart, false);
   myElement.addEventListener("touchmove", handleTouchMove, false);
-  //myElement.addEventListener("touchend", handleTouchEnd, false);
+  myElement.addEventListener("touchend", handleTouchEnd, false);
 
   let widthContainer2 = document.getElementById("container-cards-crecimiento");
   let circulos2 = document.querySelectorAll(".modelo-formativo .circulos");
