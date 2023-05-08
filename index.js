@@ -65,6 +65,7 @@ var deltaX;
    var touch = event.touches[0];
    deltaX = touch.clientX - startX; // Distancia horizontal recorrida
    deltaY = touch.clientY - startY;
+    endX = event.touches[0].clientX;
    
   }
 
