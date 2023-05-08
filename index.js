@@ -49,24 +49,21 @@ if (screen.width < 900) {
       circulos[counter / 100].style.border = "2px solid red";
     }
   }); */
-
   var startX; // Posición inicial en X al inicio del deslizamiento
 
   // Función de controlador de evento para el inicio del deslizamiento
   function handleTouchStart(event) {
     startX = event.touches[0].clientX; // Guardar la posición inicial en X
   }
-
   // Función de controlador de evento para el final del deslizamiento
   function handleTouchEnd(event) {
     var endX = event.changedTouches[0].clientX; // Obtener la posición final en X
     var deltaX = endX - startX; // Calcular la distancia deslizada
 
-<<<<<<< HEAD
     // Verificar si la distancia deslizada es pequeña (simulando un clic)
     if (Math.abs(deltaX) > 10) {
       // Acción a realizar en el evento de deslizamiento similar a un clic
-      //alert("Clic simulado");
+      alert("Clic simulado");
       // Aquí puedes agregar la lógica para realizar la acción deseada
       if (deltaX > 0) {
         if (counter == 0) {
@@ -74,25 +71,6 @@ if (screen.width < 900) {
           circulos[counter / 100].style.border = "2px solid red";
           circulos[0].style.border = "none";
           image.style.marginLeft = "-" + counter + "%";
-=======
-      // Verificar si la distancia deslizada es pequeña (simulando un clic)
-      if (Math.abs(deltaX) > 10) {
-        // Acción a realizar en el evento de deslizamiento similar a un clic
-        alert("Clic simulado");
-        // Aquí puedes agregar la lógica para realizar la acción deseada
-        if (deltaX > 0) {
-          if (counter == 0) {
-            counter = imageContentMath - 100;
-            circulos[counter / 100].style.border = "2px solid red";
-            circulos[0].style.border = "none";
-            image.style.marginLeft = "-" + counter + "%";
-          } else {
-            counter = counter -= 100;
-            image.style.marginLeft = "-" + counter + "%";
-            circulos[counter / 100 + 1].style.border = "none";
-            circulos[counter / 100].style.border = "2px solid red";
-          }
->>>>>>> 10673f7384c63c4655b4e0fb21e303efb1f616d3
         } else {
           counter = counter -= 100;
           image.style.marginLeft = "-" + counter + "%";
