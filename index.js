@@ -51,58 +51,45 @@ if (screen.width < 900) {
   }); */
 
   var startX; // Posición inicial en X al inicio del deslizamiento
-  var startY;
-  var endX;
-  var deltaX;
-  var deltaY;
+
   // Función de controlador de evento para el inicio del deslizamiento
   function handleTouchStart(event) {
-    startX = event.touches[0].clientX;
-    startY = event.touches[0].clientY; // Guardar la posición inicial en X
-    endX = null;
-  }
-
-  function handleTouchMove(event) {
-    var touch = event.touches[0];
-    deltaX = touch.clientX; // Distancia horizontal recorrida
-    deltaY = touch.clientY - startY;
-    endX = event.touches[0].clientX;
+    startX = event.touches[0].clientX; // Guardar la posición inicial en X
   }
 
   // Función de controlador de evento para el final del deslizamiento
   function handleTouchEnd(event) {
-    if (endX !== null) {
-      var deltaX = endX - startX; // Calcular la distancia deslizada
+    var endX = event.changedTouches[0].clientX; // Obtener la posición final en X
+    var deltaX = endX - startX; // Calcular la distancia deslizada
 
-      // Verificar si la distancia deslizada es pequeña (simulando un clic)
-      if (Math.abs(deltaX) > 10) {
-        // Acción a realizar en el evento de deslizamiento similar a un clic
-        //alert("Clic simulado");
-        // Aquí puedes agregar la lógica para realizar la acción deseada
-        if (deltaX > 0) {
-          if (counter == 0) {
-            counter = imageContentMath - 100;
-            circulos[counter / 100].style.border = "2px solid red";
-            circulos[0].style.border = "none";
-            image.style.marginLeft = "-" + counter + "%";
-          } else {
-            counter = counter -= 100;
-            image.style.marginLeft = "-" + counter + "%";
-            circulos[counter / 100 + 1].style.border = "none";
-            circulos[counter / 100].style.border = "2px solid red";
-          }
+    // Verificar si la distancia deslizada es pequeña (simulando un clic)
+    if (Math.abs(deltaX) > 10) {
+      // Acción a realizar en el evento de deslizamiento similar a un clic
+      //alert("Clic simulado");
+      // Aquí puedes agregar la lógica para realizar la acción deseada
+      if (deltaX > 0) {
+        if (counter == 0) {
+          counter = imageContentMath - 100;
+          circulos[counter / 100].style.border = "2px solid red";
+          circulos[0].style.border = "none";
+          image.style.marginLeft = "-" + counter + "%";
         } else {
-          if (counter == imageContentMath - 100) {
-            counter = 0;
-            circulos[counter / 100].style.border = "2px solid red";
-            circulos[circulos.length - 1].style.border = "none";
-            image.style.marginLeft = "-" + counter + "%";
-          } else {
-            counter = counter += 100;
-            image.style.marginLeft = "-" + counter + "%";
-            circulos[counter / 100 - 1].style.border = "none";
-            circulos[counter / 100].style.border = "2px solid red";
-          }
+          counter = counter -= 100;
+          image.style.marginLeft = "-" + counter + "%";
+          circulos[counter / 100 + 1].style.border = "none";
+          circulos[counter / 100].style.border = "2px solid red";
+        }
+      } else {
+        if (counter == imageContentMath - 100) {
+          counter = 0;
+          circulos[counter / 100].style.border = "2px solid red";
+          circulos[circulos.length - 1].style.border = "none";
+          image.style.marginLeft = "-" + counter + "%";
+        } else {
+          counter = counter += 100;
+          image.style.marginLeft = "-" + counter + "%";
+          circulos[counter / 100 - 1].style.border = "none";
+          circulos[counter / 100].style.border = "2px solid red";
         }
       }
     }
@@ -112,7 +99,6 @@ if (screen.width < 900) {
 
   // Agregar controladores de eventos táctiles al elemento
   myElement.addEventListener("touchstart", handleTouchStart, false);
-  myElement.addEventListener("touchmove", handleTouchMove, false);
   myElement.addEventListener("touchend", handleTouchEnd, false);
 
   let widthContainer2 = document.getElementById("container-cards-crecimiento");
