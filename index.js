@@ -1,25 +1,26 @@
 if (screen.width < 900) {
-  let widthContainer = document.getElementById("grid-tarjetas");
-  let derecha = document.getElementById("flecha-derecha");
+  var widthContainer = document.getElementById("grid-tarjetas");
+  var derecha = document.getElementById("flecha-derecha");
 
-  let containercardsaprendemos = document.getElementById(
+  var containercardsaprendemos = document.getElementById(
     "container-cards-aprendemos"
   );
-  let containercardscrecimiento1 = document.getElementById(
+  var containercardscrecimiento1 = document.getElementById(
     "container-cards-crecimiento"
   );
-  let containercardscrecimiento2 = document.getElementById(
+  var containercardscrecimiento2 = document.getElementById(
     "container-cards-crecimiento2"
   );
 
-  let circulos = document.querySelectorAll(
+  var circulos = document.querySelectorAll(
     ".container-banner-principal .circulos"
   );
 
-  let image = widthContainer;
-  let imageContent = document.querySelectorAll(".container-tajeta");
-  let imageContentMath = imageContent.length * 100;
-  let counter = 0;
+  var image = widthContainer;
+  var imageContent = document.querySelectorAll(".container-tajeta");
+  var imageContentMath = imageContent.length * 100;
+  var counter = 0;
+  alert("lo coge" + counter);
   circulos[0].style.border = "2px solid red";
   widthContainer.style.width = imageContentMath + "%";
 
@@ -75,15 +76,15 @@ if (screen.width < 900) {
   myElement.addEventListener("touchstart", handleTouchStart, false);
   myElement.addEventListener("touchend", handleTouchEnd, false);
 
-  /* let widthContainer2 = document.getElementById("container-cards-crecimiento");
-  let circulos2 = document.querySelectorAll(".modelo-formativo .circulos");
+  /* var widthContainer2 = document.getElementById("container-cards-crecimiento");
+  var circulos2 = document.querySelectorAll(".modelo-formativo .circulos");
   console.log(circulos2);
-  let image2 = widthContainer2;
-  let imageContent2 = document.querySelectorAll(
+  var image2 = widthContainer2;
+  var imageContent2 = document.querySelectorAll(
     "#container-cards-crecimiento .card-crecimiento"
   );
-  let imageContentMath2 = imageContent2.length * 100;
-  let counter2 = 0;
+  var imageContentMath2 = imageContent2.length * 100;
+  var counter2 = 0;
   circulos2[0].style.border = "2px solid red";
   widthContainer2.style.width = imageContentMath2 + "%";
   var startX2; // Posición inicial en X al inicio del deslizamiento
