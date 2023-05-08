@@ -22,33 +22,7 @@ if (screen.width < 900) {
   let counter = 0;
   circulos[0].style.border = "2px solid red";
   widthContainer.style.width = imageContentMath + "%";
-  /* prev.addEventListener("click", (e) => {
-    if (counter == 0) {
-      counter = imageContentMath - 100;
-      circulos[counter / 100].style.border = "2px solid red";
-      circulos[0].style.border = "none";
-      image.style.marginLeft = "-" + counter + "%";
-    } else {
-      counter = counter -= 100;
-      image.style.marginLeft = "-" + counter + "%";
-      circulos[counter / 100 + 1].style.border = "none";
-      circulos[counter / 100].style.border = "2px solid red";
-    }
-  }); */
 
-  /* next.addEventListener("click", (e) => {
-    if (counter == imageContentMath - 100) {
-      counter = 0;
-      circulos[counter / 100].style.border = "2px solid red";
-      circulos[circulos.length - 1].style.border = "none";
-      image.style.marginLeft = "-" + counter + "%";
-    } else {
-      counter = counter += 100;
-      image.style.marginLeft = "-" + counter + "%";
-      circulos[counter / 100 - 1].style.border = "none";
-      circulos[counter / 100].style.border = "2px solid red";
-    }
-  }); */
   var startX; // Posición inicial en X al inicio del deslizamiento
 
   // Función de controlador de evento para el inicio del deslizamiento
@@ -61,9 +35,9 @@ if (screen.width < 900) {
     var deltaX = endX - startX; // Calcular la distancia deslizada
 
     // Verificar si la distancia deslizada es pequeña (simulando un clic)
-    if (Math.abs(deltaX) > 10) {
+    if (Math.abs(deltaX) > 100) {
       // Acción a realizar en el evento de deslizamiento similar a un clic
-      alert("Clic simulado");
+
       // Aquí puedes agregar la lógica para realizar la acción deseada
       if (deltaX > 0) {
         if (counter == 0) {
