@@ -161,7 +161,7 @@
   text-align: center;
   font-family: RobotoRegular;
   padding-top: 20px;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 .container-cards-equipo {
   max-width: 90%;
@@ -211,15 +211,31 @@
   padding: 2rem;
   height: 50%;
 }
+.card-equipo .biografia p {
+  font-family: Roboto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+}
 .card-equipo .nombre {
   width: 100%;
   height: 15%;
-  background-color: #50af7e;
+  background-color: #14ba7c;
 
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px 0 20px 0;
+}
+.profesion {
+  font-family: BasisBlack;
+  font-size: 1.1rem;
+  color: white;
+}
+.card-equipo .nombre p {
+  font-family: BasisBlack;
+  font-size: 1.1rem;
+  color: white;
 }
 .card-equipo .foto img {
   max-width: 100%;
@@ -273,6 +289,9 @@
   display: flex;
   align-items: center;
   padding-left: 25px;
+  font-family: BasisBlack;
+  font-size: 1.1rem;
+  color: #082f24;
 }
 .camposFormulario input {
   width: 70%;
@@ -309,18 +328,19 @@ form {
   border-radius: 433px 0 240px 0; */
 }
 .container-cards-aprendemos .title {
-  font-family: RobotoBlack;
+  font-family: BasisBlack;
   color: #082f24;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 .container-cards-aprendemos .descripcion {
   text-align: center;
   font-family: roboto;
-  height: 40%;
+  height: 50%;
   max-width: 90%;
   margin: 2rem auto;
   color: #082f23;
+  font-size: 1.1rem;
 }
 .card-aprendemos {
   border-radius: 1rem;
@@ -384,7 +404,7 @@ form {
   box-shadow: 0px 3px 0px 1px #ccc;
 }
 .descripcion-mision {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .grid-tarjetas {
   display: grid;
@@ -445,7 +465,7 @@ form {
   text-align: center;
   color: black;
   margin-top: 2frem;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-family: Roboto;
 }
 .pad50 {
@@ -473,11 +493,11 @@ form {
   font-family: Roboto;
   color: #706f6f;
   line-height: 1.8rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 .title-mision {
-  font-family: RobotoBlack;
-  font-size: 1.5rem;
+  font-family: BasisBlack;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 .titulo-crecimiento {
@@ -485,7 +505,7 @@ form {
   margin-bottom: 1.2rem;
   font-family: BasisBlack;
   font-weight: 900;
-  font-size: 25px;
+  font-size: 1.1rem;
   color: #082f24;
 }
 .parrafoBanner {
@@ -495,6 +515,7 @@ form {
   padding-top: 100px;
   position: relative;
   z-index: 3;
+  font-size: 1.1rem;
 }
 .title-1 {
   font-family: BasisBlack;
@@ -514,7 +535,7 @@ form {
   padding-top: 2rem;
 }
 .title-como-aprendemos {
-  font-family: RobotoMedium;
+  font-family: BasisBlack;
   text-align: center;
   margin-top: 4rem;
   font-size: 3rem;
