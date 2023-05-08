@@ -61,12 +61,10 @@ if (screen.width < 900) {
     startY = event.touches[0].clientY; // Guardar la posición inicial en X
     endX = null;
   }
-var deltaX;
-  var deltaY;
+
   function handleTouchMove(event) {
     var touch = event.touches[0];
     deltaX = touch.clientX; // Distancia horizontal recorrida
-    console.log("este es el deltax" + deltaX);
     deltaY = touch.clientY - startY;
     endX = event.touches[0].clientX;
   }
@@ -108,9 +106,7 @@ var deltaX;
         }
       }
     }
-     }
-   }
-  
+  }
 
   var myElement = document.getElementById("grid-tarjetas");
 
