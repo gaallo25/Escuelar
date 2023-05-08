@@ -51,10 +51,12 @@ if (screen.width < 900) {
   }); */
 
   var startX; // Posición inicial en X al inicio del deslizamiento
+  var startY;
   var endX;
   // Función de controlador de evento para el inicio del deslizamiento
   function handleTouchStart(event) {
-    startX = event.touches[0].clientX; // Guardar la posición inicial en X
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;// Guardar la posición inicial en X
     endX = null; 
   }
 var deltaX;
