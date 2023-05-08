@@ -69,7 +69,7 @@ if (screen.width < 900) {
     function handleTouchEnd(event) {
    if (endX !== null) {
     var deltaX = endX - startX; // Calcular la distancia deslizada
-
+    alert("si toma el evento")
     // Verificar si la distancia deslizada es pequeña (simulando un clic)
     if (Math.abs(deltaX) > 10) {
       // Acción a realizar en el evento de deslizamiento similar a un clic
