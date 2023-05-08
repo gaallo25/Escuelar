@@ -53,6 +53,7 @@ if (screen.width < 900) {
           circulos[counter / 100].style.border = "2px solid red";
         }
       } else {
+        alert("deberia mover lala" + counter);
         if (counter == imageContentMath - 100) {
           counter = 0;
           circulos[counter / 100].style.border = "2px solid red";
