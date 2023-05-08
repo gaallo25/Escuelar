@@ -58,12 +58,45 @@ if (screen.width < 900) {
   }
 
   function handleTouchMove(event) {
-    event.preventDefault(); 
-    alert("movimiento ios");
+    event.preventDefault();
+    var endX = event.changedTouches[0].clientX; // Obtener la posición final en X
+    var deltaX = endX - startX; // Calcular la distancia deslizada
+
+    // Verificar si la distancia deslizada es pequeña (simulando un clic)
+    if (Math.abs(deltaX) > 50) {
+      // Acción a realizar en el evento de deslizamiento similar a un clic
+      //alert("Clic simulado");
+      // Aquí puedes agregar la lógica para realizar la acción deseada
+      if (deltaX > 0) {
+        if (counter == 0) {
+          counter = imageContentMath - 100;
+          circulos[counter / 100].style.border = "2px solid red";
+          circulos[0].style.border = "none";
+          image.style.marginLeft = "-" + counter + "%";
+        } else {
+          counter = counter -= 100;
+          image.style.marginLeft = "-" + counter + "%";
+          circulos[counter / 100 + 1].style.border = "none";
+          circulos[counter / 100].style.border = "2px solid red";
+        }
+      } else {
+        if (counter == imageContentMath - 100) {
+          counter = 0;
+          circulos[counter / 100].style.border = "2px solid red";
+          circulos[circulos.length - 1].style.border = "none";
+          image.style.marginLeft = "-" + counter + "%";
+        } else {
+          counter = counter += 100;
+          image.style.marginLeft = "-" + counter + "%";
+          circulos[counter / 100 - 1].style.border = "none";
+          circulos[counter / 100].style.border = "2px solid red";
+        }
+      }
+    }
   }
 
   // Función de controlador de evento para el final del deslizamiento
-  function handleTouchEnd(event) {
+  /*   function handleTouchEnd(event) {
     var endX = event.changedTouches[0].clientX; // Obtener la posición final en X
     var deltaX = endX - startX; // Calcular la distancia deslizada
 
@@ -98,14 +131,14 @@ if (screen.width < 900) {
         }
       }
     }
-  }
+  } */
 
   var myElement = document.getElementById("grid-tarjetas");
 
   // Agregar controladores de eventos táctiles al elemento
   myElement.addEventListener("touchstart", handleTouchStart, false);
   myElement.addEventListener("touchmove", handleTouchMove, false);
-  myElement.addEventListener("touchend", handleTouchEnd, false);
+  //myElement.addEventListener("touchend", handleTouchEnd, false);
 
   let widthContainer2 = document.getElementById("container-cards-crecimiento");
   let circulos2 = document.querySelectorAll(".modelo-formativo .circulos");
