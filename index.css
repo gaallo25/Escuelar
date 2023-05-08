@@ -96,31 +96,42 @@
 }
 .container-banner-principal {
   background-color: #082f23;
-  padding-bottom: 3rem;
+  padding-bottom: 8rem;
 }
 .container-components {
   margin-left: 15%;
   display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 140px;
   justify-content: space-between;
   position: relative;
 }
+.mantra{
+  width: 100%;
+    background: #50af7e;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 71px 0 0 0;
+    padding: 5rem 0;
+    padding-left: 3rem;
+}
 .mision {
-  max-width: 60%;
+  max-width: 70%;
 }
 .container-mision {
-  max-width: 70%;
-  width: 70%;
-  gap: 50px;
-  display: flex;
+  max-width: 100%;
+    width: 100%;
+    gap: 100px;
+    display: flex;
 }
 .container-mision-vision {
   max-width: 50%;
-  width: 50%;
-  gap: 50px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
+    width: 50%;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
 }
 .container-mision-vision img {
   width: 100%;
@@ -148,10 +159,77 @@
   padding-top: 20px;
   font-size: 1.2rem;
 }
-.container-equipo img {
+.container-cards-equipo{
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
+}
+.container-cards-equipo > div:nth-child(5),
+  
+  .container-cards-equipo > div:nth-child(7) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+.container-equipo {
+  background-image: url(fotofooter.webp);
+  background-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.card-equipo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-equipo .foto{
+  width: 130px;
+    height: 150px;
+  background-color: #66ad49;
+  
+  border-radius: 75px 0 85px 0;
+}
+.mt-1{
+  margin-top: 1rem;
+}
+.card-equipo .biografia{
+  width: 100%;
+  z-index: 2;
+  background-color: #009a79;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 50%;
+}
+.card-equipo .nombre{
+  width: 100%;
+  height: 15%;
+  background-color: #50af7e;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 0 20px 0;
+}
+.card-equipo .foto img{
+  max-width: 100%;
+} 
+.card-equipo .nombre img{
+  max-width: 9%;
+  margin-left: 20px;
+}   
+/* .container-equipo img {
   width: 100%;
   max-width: 100%;
-}
+  position: absolute;
+} */
 .container-cards-aprendemos {
   margin: 0px auto;
   margin-top: 5rem;
@@ -160,8 +238,58 @@
   display: flex;
   justify-content: center;
 }
+.ocultar{
+  display: none;
+}
+.container-formulario{
+  background-color: #50af7e;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.formulario{
+  max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-radius: 3rem;
+}
+.camposFormulario{
+  display: flex;
+  height: 55px;
+}
+.camposFormulario label{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+}
+.camposFormulario input{
+  width: 70%;
+  background-color: #50af7e;
+  border-style: none;
+  border: none;
+  border-radius: 35px 0 35px 0;
+}
+form{
+  padding: 2rem 0;
+  max-width: 70%;
+  width: 100%;
+  max-width: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
 .leaf-components {
-  max-width: 45%;
+  max-width: 50%;
   width: 50%;
   position: absolute;
   right: 0;
@@ -230,9 +358,18 @@
   justify-content: center;
   padding-top: 5rem;
   margin-bottom: 5rem;
+  position: relative;
 }
+.container-objetivos img{
+  position: absolute;
+    width: 100%;
+    top: -44%;
+    z-index: 1;
+}
+
+
 .container-objetivos p {
-  color: #50b37e;
+  color: white;
   font-family: RobotoMedium;
   font-size: 3rem;
 }
@@ -245,7 +382,7 @@
   box-shadow: 0px 3px 0px 1px #ccc;
 }
 .descripcion-mision {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .grid-tarjetas {
   display: grid;
@@ -326,6 +463,7 @@
   text-align: center;
   max-width: 1200px;
   padding: 0px 10px;
+  z-index: 3;
 }
 .texto-crecimiento {
   text-align: center;
@@ -349,9 +487,11 @@
 }
 .parrafoBanner {
   text-align: center;
-  font-family: roboto;
-  color: white;
-  padding-top: 100px;
+    font-family: roboto;
+    color: white;
+    padding-top: 100px;
+    position: relative;
+    z-index: 3;
 }
 .title-1 {
   font-family: RobotoBlack;
@@ -385,6 +525,38 @@
     overflow: hidden;
     width: 100%;
   }
+  .container-objetivos {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+     margin-bottom: 0; 
+    position: relative;
+    background-image: url(imgobjetivos.webp);
+    background-size: 696%;
+    background-position: 10%;
+}
+  .container-cards-equipo {
+     max-width: 700%; 
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+     gap: 15px; 
+    margin-bottom: 3rem;
+    height: 100%;
+    width: 700%;}
+    .container-objetivos img{
+      display: none;
+    }
+    .card-equipo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* max-width: 53%; */
+      width: 100%;
+      margin: 20px;
+  }
+
   .pad-x-15 {
     padding: 0px 15px;
   }
@@ -467,6 +639,7 @@
     justify-content: center;
     width: 500%;
   }
+  
   .texto-crecimiento {
     font-size: 1.1rem;
   }
