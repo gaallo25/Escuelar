@@ -77,7 +77,7 @@ if (screen.width < 900) {
       // Verificar si la distancia deslizada es pequeña (simulando un clic)
       if (Math.abs(deltaX) > 10) {
         // Acción a realizar en el evento de deslizamiento similar a un clic
-        //alert("Clic simulado");
+        alert("Clic simulado");
         // Aquí puedes agregar la lógica para realizar la acción deseada
         if (deltaX > 0) {
           if (counter == 0) {
