@@ -58,7 +58,7 @@ if (screen.width < 900) {
   }
 
   function handleTouchMove(event) {
-    event.preventDefault(); // Evitar el desplazamiento de la página en iOS
+    
   }
 
   // Función de controlador de evento para el final del deslizamiento
