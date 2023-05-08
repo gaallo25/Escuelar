@@ -20,7 +20,7 @@ if (screen.width < 900) {
   var imageContent = document.querySelectorAll(".container-tajeta");
   var imageContentMath = imageContent.length * 100;
   var counter = 0;
-  alert("lo coge" + counter);
+
   circulos[0].style.border = "2px solid red";
   widthContainer.style.width = imageContentMath + "%";
 
@@ -42,7 +42,6 @@ if (screen.width < 900) {
       // Aquí puedes agregar la lógica para realizar la acción deseada
       if (deltaX > 0) {
         if (counter == 0) {
-          alert("deberia mover" + counter);
           counter = imageContentMath - 100;
           circulos[counter / 100].style.border = "2px solid red";
           circulos[0].style.border = "none";
@@ -54,7 +53,6 @@ if (screen.width < 900) {
           circulos[counter / 100].style.border = "2px solid red";
         }
       } else {
-        alert("deberia mover lala" + counter);
         if (counter == imageContentMath - 100) {
           counter = 0;
           circulos[counter / 100].style.border = "2px solid red";
