@@ -59,15 +59,16 @@ if (screen.width < 900) {
   }
 
   function handleTouchMove(event) {
-   
-    endX = event.touches[0].clientX;
-
+   var touch = event.touches[0];
+  var deltaX = touch.clientX - startX; // Distancia horizontal recorrida
+  var deltaY = touch.clientY - startY;
    
   }
 
   // Función de controlador de evento para el final del deslizamiento
     function handleTouchEnd(event) {
    if (endX !== null) {
+     
     var deltaX = endX - startX; // Calcular la distancia deslizada
     
     // Verificar si la distancia deslizada es pequeña (simulando un clic)
