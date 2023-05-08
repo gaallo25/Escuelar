@@ -51,53 +51,23 @@ if (screen.width < 900) {
   }); */
 
   var startX; // Posición inicial en X al inicio del deslizamiento
-
+  var endX;
   // Función de controlador de evento para el inicio del deslizamiento
   function handleTouchStart(event) {
     startX = event.touches[0].clientX; // Guardar la posición inicial en X
+    endX = null; 
   }
 
   function handleTouchMove(event) {
     event.preventDefault();
-    var endX = event.changedTouches[0].clientX; // Obtener la posición final en X
-    var deltaX = endX - startX; // Calcular la distancia deslizada
+    endX = event.touches[0].clientX;
 
-    // Verificar si la distancia deslizada es pequeña (simulando un clic)
-    if (Math.abs(deltaX) > 50) {
-      // Acción a realizar en el evento de deslizamiento similar a un clic
-      //alert("Clic simulado");
-      // Aquí puedes agregar la lógica para realizar la acción deseada
-      if (deltaX > 0) {
-        if (counter == 0) {
-          counter = imageContentMath - 100;
-          circulos[counter / 100].style.border = "2px solid red";
-          circulos[0].style.border = "none";
-          image.style.marginLeft = "-" + counter + "%";
-        } else {
-          counter = counter -= 100;
-          image.style.marginLeft = "-" + counter + "%";
-          circulos[counter / 100 + 1].style.border = "none";
-          circulos[counter / 100].style.border = "2px solid red";
-        }
-      } else {
-        if (counter == imageContentMath - 100) {
-          counter = 0;
-          circulos[counter / 100].style.border = "2px solid red";
-          circulos[circulos.length - 1].style.border = "none";
-          image.style.marginLeft = "-" + counter + "%";
-        } else {
-          counter = counter += 100;
-          image.style.marginLeft = "-" + counter + "%";
-          circulos[counter / 100 - 1].style.border = "none";
-          circulos[counter / 100].style.border = "2px solid red";
-        }
-      }
-    }
+   
   }
 
   // Función de controlador de evento para el final del deslizamiento
-  /*   function handleTouchEnd(event) {
-    var endX = event.changedTouches[0].clientX; // Obtener la posición final en X
+    function handleTouchEnd(event) {
+   if (endX !== null) {
     var deltaX = endX - startX; // Calcular la distancia deslizada
 
     // Verificar si la distancia deslizada es pequeña (simulando un clic)
@@ -131,7 +101,8 @@ if (screen.width < 900) {
         }
       }
     }
-  } */
+   }
+  } 
 
   var myElement = document.getElementById("grid-tarjetas");
 
