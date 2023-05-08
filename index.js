@@ -51,14 +51,14 @@ if (screen.width < 900) {
   }); */
 
   var startX; // Posición inicial en X al inicio del deslizamiento
-  console.log("hola");
+
   // Función de controlador de evento para el inicio del deslizamiento
   function handleTouchStart(event) {
     startX = event.touches[0].clientX; // Guardar la posición inicial en X
   }
 
   function handleTouchMove(event) {
-    event.preventDefault(); // Evitar el desplazamiento de la página en iOS
+    alert("movimiento ios");
   }
 
   // Función de controlador de evento para el final del deslizamiento
@@ -69,7 +69,7 @@ if (screen.width < 900) {
     // Verificar si la distancia deslizada es pequeña (simulando un clic)
     if (Math.abs(deltaX) > 10) {
       // Acción a realizar en el evento de deslizamiento similar a un clic
-      console.log("Clic simulado");
+      //alert("Clic simulado");
       // Aquí puedes agregar la lógica para realizar la acción deseada
       if (deltaX > 0) {
         if (counter == 0) {
